@@ -10,7 +10,7 @@ import useWindowSize from '../hooks/useWindowSize';
 import Confetti from 'react-confetti';
 import MoveSound from '../../public/move.wav';
 import CaptureSound from '../../public/capture.wav';
-
+// lalalal
 export function isPromoting(chess: Chess, from: Square, to: Square) {
   if (!from) {
     return false;
@@ -247,12 +247,12 @@ export const ChessBoard = ({
                               from,
                               to: squareRepresentation,
                             });
-                            const piece=chess.get(squareRepresentation)?.type
+                            const piece = chess.get(squareRepresentation)?.type
                             setMoves((moves) => [
                               ...moves,
-                              { from, to: squareRepresentation,piece },
+                              { from, to: squareRepresentation, piece },
                             ]);
-                          } catch (e) {}
+                          } catch (e) { }
                         }
                       }}
                       style={{
@@ -275,17 +275,17 @@ export const ChessBoard = ({
                         {square && <ChessSquare square={square} />}
                         {isFlipped
                           ? i === 8 && (
-                              <LetterNotation
-                                label={labels[j]}
-                                isMainBoxColor={j % 2 !== 0}
-                              />
-                            )
+                            <LetterNotation
+                              label={labels[j]}
+                              isMainBoxColor={j % 2 !== 0}
+                            />
+                          )
                           : i === 1 && (
-                              <LetterNotation
-                                label={labels[j]}
-                                isMainBoxColor={j % 2 !== 0}
-                              />
-                            )}
+                            <LetterNotation
+                              label={labels[j]}
+                              isMainBoxColor={j % 2 !== 0}
+                            />
+                          )}
                         {!!from &&
                           legalMoves.includes(squareRepresentation) && (
                             <LegalMoveIndicator
